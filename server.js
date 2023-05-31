@@ -4,7 +4,7 @@ const PORT = 3000;
 const drinks = require('./models/drinks');
 
 
-console.log(drinks[0].name)
+
 
 //Index
 app.get('/drinks/', (req, res) => {
@@ -15,3 +15,8 @@ app.get('/drinks/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`App is listening on port ${PORT}`)
 })
+
+const drinkName = drinks[0].name.charAt(0).toUpperCase() + drinks[0].name.slice(1) ;
+
+console.log(drinkName)
+

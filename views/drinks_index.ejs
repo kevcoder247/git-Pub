@@ -4,15 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    body{
+      background-color: grey;
+      color: blanchedalmond;
+    }
+  </style>
   <title>Git Pub Drinks</title>
 </head>
 <body>
   <h1>Welcome to Git Pub</h1>
-
+  <!-- <%  %> -->
   <% for(let i = 0; i < drinks.length; i++){ %>
-    <p><%= drinks[i].name %> </p>
+    <% let currentDrink = drinks[i].name; %>
+    <ul>
+     <li>
+      <a href="">
+        <%= currentDrink.charAt(0).toUpperCase() + currentDrink.slice(1)  %>
+       </a>
+     </li>
+    </ul>
   <% } %>
-
-  
 </body>
 </html>
