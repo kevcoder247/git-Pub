@@ -1,9 +1,14 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
+const drinks = require('./models/drinks');
 
-app.get('/', (req, res) => {
-  res.send('Gitpub App!')
+
+console.log(drinks[0].name)
+
+//Index
+app.get('/drinks/', (req, res) => {
+  res.render('drinks_index.ejs', {drinks});
 })
 
 
