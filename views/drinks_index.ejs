@@ -15,12 +15,25 @@
 <body>
   <h1>Welcome to Git Pub</h1>
   <!-- <%  %> -->
+  <h2>Drinks</h2>
   <% for(let i = 0; i < drinks.length; i++){ %>
     <% let currentDrink = drinks[i].name; %>
     <ul>
      <li>
       <a href="drinks/<%= i %>">
         <%= currentDrink.charAt(0).toUpperCase() + currentDrink.slice(1)  %>
+       </a>
+     </li>
+    </ul>
+  <% } %>
+<hr>
+<h2>Food</h2>
+  <% for(let i = 0; i < food.length; i++){ %>
+    <% let currentFood = food[i].name; %>
+    <ul>
+     <li>
+      <a href="food/<%= i %>">
+        <%= currentFood.charAt(0).toUpperCase() + currentFood.slice(1)  %>
        </a>
      </li>
     </ul>
