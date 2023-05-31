@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    body{
+      background-color: grey;
+      color: #fff;
+    }
+
+    img{
+      width: 250px;
+    }
+  </style>
+  <title>Drink Detail</title>
+</head>
+<body>
+  <h1>Show Page</h1>
+
+  <!-- recreate a function that capitalizes the first letter of each word in the string -->
+  <!-- create a variable that takes the string of words and splits them to an array of words -->
+  <!-- create a variable that holds a .map() method on word, so we can loop through each word in the array and take the first character with charAt(0) of the string and capitalizing that character with .toUpperCase() -->
+  <!-- we then concatenate that letter back with the slice() method which give us the string minus the first character thats why we add the first character alone -->
+  <!-- <%%> -->
+<% function capilatizerFirstLetters(string){ %>
+<%  const words = string.split(" "); %>
+<%const capitalizeWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1))%>
+<%  return capitalizeWords.join(' '); %>
+<% } %>
+
+<% console.log(capilatizerFirstLetters(drinks.name))%>
+
+  <!-- <%  %> -->
+  <h2>Name Of Drink: <%=capilatizerFirstLetters(drinks.name)%></h2>
+
+  <img src=<%=drinks.image + ".jpg" %>>
+
+
+  <h3>Price: $<%= drinks.price %> </h3>
+
+  <a href="/drinks">Back to Main Menu</a>
+</body>
+</html>

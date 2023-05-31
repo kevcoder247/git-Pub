@@ -14,15 +14,13 @@ app.get('/drinks/', (req, res) => {
 
 //Show Route
 app.get('/drinks/:id', (req, res) => {
-  res.send(req.params.id)
-  console.log(req.params.id)
+  res.render('drinks_show.ejs', {
+    drinks: drinks[req.params.id]
+  })
 })
 
 app.listen(PORT, () => {
   console.log(`App is listening on port ${PORT}`)
 })
 
-const drinkName = drinks[0].name.charAt(0).toUpperCase() + drinks[0].name.slice(1) ;
-
-console.log(drinkName)
 
